@@ -5,61 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeleStick - 渡邊恵太研究室｜明治大学｜総合数理学部｜先端メディアサイエンス学科</title>
+    <link href="./images/favicon.ico" rel="icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="./images/favicon.ico" />
-    <style rel="stylesheet">
-        html, body {
-            font-family: 'Lato', 'Roboto', sans-serif;
-        }
-        header {
-            padding: 15px;
-            font-size: 12px;
-        }
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
-        .display-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .video-wrap {
-            position: relative;
-        }
-        .video-btn {
-            content: "";
-            position: absolute;
-            top:0; left:0; right:0; bottom:0px;
-            cursor: pointer;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-        img {
-            width: 100%;
-        }
-        p {
-            word-break: break-all;
-        }
-
-        .wrapper {
-            margin: 0 auto;
-            padding: 15px;
-            max-width: 480px;
-        }
-        .container {
-            margin: 0 auto;
-            padding: 15px 0;
-        }
-
-        .emphasis {
-            color: #F2511A;
-        }
-    </style>
+    <link href="./style.css" rel="stylesheet"></style>
 </head>
 <body>
     <header class="display-flex" style="border-bottom: #EEEEEE solid 1px;">
@@ -77,15 +26,18 @@
         <a href="https://keita-lab.jp/contact/">CONTACT</a> -->
     </header>
 
-    <div class="video-wrap">
-        <video id="video" autoplay loop muted playsinline style="width: 100%;" src="images/telestick.mp4"></video>
-        <div class="video-btn" id="video-btn"></div>
+    <div class="video-wrapper">
+        <video class="video-background" style="width: 100%;" autoplay loop muted playsinline src="./images/telestick.mp4"></video>
+        <div class="video-container">
+            <video id="video" autoplay loop muted playsinline src="./images/telestick.mp4"></video>
+            <div class="video-btn" id="video-btn"></div>
+        </div>
     </div>
 
     <main class="wrapper">
         <div class="container" style="padding: 30px 0;">
             <h2>かんたんに、画面に、入る、<span class="emphasis">ふれる</span></h2>
-            <p>一般的な環境でも、触覚を含む映像の収録・再生を可能にします。</p>
+            <p>棒と触覚を通じて、映像内に入り込むような体験ができます。</p>
         </div>
         <div class="container">
             <h2><span class="emphasis">収録システム</span>: TeleStickRecorder</h2>
@@ -115,9 +67,9 @@
         </div>
     </main>
 
-    <div class="wrapper">
-        <h3 style="text-align: center;">Twitterにも活動情報があります</h3>
-        <a href="https://twitter.com/keita_lab" targer="_blank" rel="noreferrer noopener">
+    <div class="wrapper" style="text-align: center;">
+        <h3>Twitterにも活動情報があります</h3>
+        <a class="link-twitter" href="https://twitter.com/keita_lab" targer="_blank" rel="noreferrer noopener">
             <div style="text-align: center;">
                 <i style="font-size: 40px;" class="fa-brands fa-twitter"></i>
                 <p>渡邊研究室Twitter</p>
@@ -126,8 +78,8 @@
     </div>
 
 
-    <footer class="wrapper" style="border-top: #EEEEEE solid 1px; width: 100%; padding: 15px 0;">
-        <p style="font-size: 12px; color: #828282; text-align: center;">2022 © WATANABE LABORATORY All Rights Reserved.</p>
+    <footer class="wrapper">
+        <p>2022 © WATANABE LABORATORY All Rights Reserved.</p>
     </footer>
 
     <script>
